@@ -25,6 +25,7 @@ const CardComponent = () => {
             >
               Item Name
             </Typography>
+
             <Typography
               variant="h5"
               color="#fff"
@@ -32,6 +33,15 @@ const CardComponent = () => {
               textAlign="center"
               flex={1}
             >
+              <span
+                style={{
+                  textDecoration: "line-through",
+                  textDecorationStyle: "double",
+                  marginRight: "1rem",
+                }}
+              >
+                N
+              </span>
               Price
             </Typography>
           </Grid>

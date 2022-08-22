@@ -1,26 +1,32 @@
+/* 1 */
+/* 
 @font-face {
-  font-family: "Product Sans";
+  font-family: "product-sans-regular";
   font-display: swap;
   src: url("assets/fonts/Product-Sans-Regular.ttf") format("ttf");
-}
+} */
+
+/* 3 */
 @font-face {
-  font-family: "Product Sans";
+  font-family: "product-sans-italic";
   font-display: swap;
   font-weight: 700;
-  src: url("assets/fonts/Product-Sans-Bold.ttf") format("ttf");
+  src: url("assets/fonts/Product-Sans-Italic.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Product Sans";
+  font-family: "product-sans-bold";
   font-display: swap;
   font-weight: 600;
-  src: url("assets/fonts/Product-Sans-Bold-Italic.ttf") format("ttf");
+  src: url("assets/fonts/Product-Sans-Bold.ttf") format("ttf");
 }
+
+/* 2 */
 @font-face {
-  font-family: "Product Sans";
+  font-family: "product-sans-bold-italic";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url("assets/fonts/Product-Sans-Bold-Italic.ttf") format("ttf");
+  src: url("assets/fonts/Product-San-Bold-Italic.ttf") format("ttf");
 }
 *,
 *::before,
@@ -32,6 +38,25 @@
 html,
 body {
   font-size: 62.5%;
-  font-family: "Product Sans", "Roboto", sans-serif;
+  font-family: "product-sans", "Roboto", sans-serif;
   scroll-behavior: smooth;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    356deg,
+    rgba(255, 255, 255, 1) 47%,
+    rgba(252, 242, 219, 1) 47%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    356deg,
+    rgba(255, 255, 255, 1) 36%,
+    rgba(252, 242, 219, 1) 36%
+  );
+  /* z-index: -1; */
 }

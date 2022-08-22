@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { Input, CustomSelect } from "components";
+import { Fragment } from "react";
 
 const InputSection = () => {
   const options = [
@@ -30,42 +31,44 @@ const InputSection = () => {
         comment={true}
         commentValue="The purchase reciept would be sent to this address"
       />
-      <Input
-        label="Address 1"
-        name="address1"
-        placeholder="The Address of the user goes here"
-        required={false}
-        others={false}
-      />
-      <Input
-        label="Address 2"
-        name="address2"
-        placeholder="and here"
-        required={false}
-        others={false}
-      />
-      <Grid item container flexWrap="nowrap" gap={2}>
-        <Grid item xs={8}>
-          <Input
-            label="Local Government"
-            name="lg"
-            placeholder="Surulere"
-            required={false}
-            others={false}
-          />
+      <Fragment sx={{ background: "blue !Important" }}>
+        <Input
+          label="Address 1"
+          name="address1"
+          placeholder="The Address of the user goes here"
+          required={false}
+          others={false}
+        />
+        <Input
+          label="Address 2"
+          name="address2"
+          placeholder="and here"
+          required={false}
+          others={false}
+        />
+        <Grid item container flexWrap="nowrap" gap={2}>
+          <Grid item xs={8}>
+            <Input
+              label="Local Government"
+              name="lg"
+              placeholder="Surulere"
+              required={false}
+              others={false}
+            />
+          </Grid>
+          <Grid item xs={4}>
+            <CustomSelect
+              label="State"
+              name="state"
+              value="Lagos"
+              placeholder=""
+              required={false}
+              others={false}
+              options={options}
+            />
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-          <CustomSelect
-            label="State"
-            name="state"
-            value="Lagos"
-            placeholder=""
-            required={false}
-            others={false}
-            options={options}
-          />
-        </Grid>
-      </Grid>
+      </Fragment>
     </Grid>
   );
 };

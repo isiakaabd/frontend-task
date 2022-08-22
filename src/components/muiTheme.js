@@ -1,12 +1,13 @@
+import productsans from "assets/fonts/product-sans-regular.ttf";
 import { createTheme } from "@mui/material/styles";
 
+// import "ProductSansBoldItalic" from "./as"
 const dark = "#000";
 const grey = "#BDBDBD";
 // const red = "#3e5ea9";
 const lightWhite = "#F7F7FF";
 const lightGrey = "#4F4F4F";
 const white = "#fff";
-
 const lightYellow = "#F2994A";
 const lighterYellow = "rgba(242, 153, 74, .8)";
 const purple = "#4E598C";
@@ -39,7 +40,7 @@ export const muiTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['"Product Sans"', "Roboto", "sans-serif"].join(", "),
+    fontFamily: ['"product-sans", "Roboto", "sans-serif"'].join(", "),
     fontSize: 10,
     htmlFontSize: 10,
     h1: {
@@ -77,20 +78,6 @@ export const muiTheme = createTheme({
       fontSize: "1rem",
       fontWeight: 400,
       lineHeight: "2.4rem",
-    },
-
-    input: {
-      width: "100%",
-      height: "5rem",
-      padding: "clamp(0.3rem, 2vw, 1rem)",
-      fontSize: "clamp(1.4rem,2vw,1.6rem)",
-      color: dark,
-      fontWeight: 600,
-      "&::placeholder": {
-        color: lightGrey,
-        // fontSize: "clamp(1.2rem,2vw,1.6rem)",
-        fontWeight: "500 !important",
-      },
     },
   },
   components: {
@@ -148,5 +135,21 @@ export const muiTheme = createTheme({
         },
       },
     },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: `
+        @font-face {
+          font-family: 'product-sans';
+          font-style: normal;
+          font-display: swap;
+          font-weight: 400;
+          src: local('product-sans'), local('prouct-sans-regular'), url(${productsans}) format('ttf');
+        }
+        `,
+        // unicodeRange: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF;
+      },
+    },
   },
 });
+
+console.log(muiTheme);
