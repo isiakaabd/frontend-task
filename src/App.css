@@ -1,33 +1,31 @@
-/* 1 */
-/* 
-@font-face {
-  font-family: "product-sans-regular";
-  font-display: swap;
-  src: url("assets/fonts/Product-Sans-Regular.ttf") format("ttf");
-} */
-
-/* 3 */
-@font-face {
-  font-family: "product-sans-italic";
-  font-display: swap;
-  font-weight: 700;
-  src: url("assets/fonts/Product-Sans-Italic.ttf") format("ttf");
-}
 @font-face {
   font-family: "product-sans-bold";
   font-display: swap;
   font-weight: 600;
-  src: url("assets/fonts/Product-Sans-Bold.ttf") format("ttf");
+  src: url("assets/fonts/Product-Sans-Bold.ttf") format("truetype");
 }
 
-/* 2 */
 @font-face {
-  font-family: "product-sans-bold-italic";
-  font-style: italic;
-  font-weight: 500;
+  font-family: "product-sans-light";
   font-display: swap;
-  src: url("assets/fonts/Product-San-Bold-Italic.ttf") format("ttf");
+  font-style: italic;
+  src: url("assets/fonts/Product-Sans-Italic.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "product-sans-regular";
+  font-display: swap;
+  src: url("assets/fonts/Product-sans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Euclid Circular";
+  font-display: swap;
+  font-weight: 500;
+  font-style: italic;
+  src: url("assets/fonts/Product-San-Bold-Italic.ttf") format("truetype");
+}
+
 *,
 *::before,
 *::after {
@@ -38,7 +36,6 @@
 html,
 body {
   font-size: 62.5%;
-  font-family: "product-sans", "Roboto", sans-serif;
   scroll-behavior: smooth;
   height: 100%;
 

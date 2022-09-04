@@ -22,6 +22,9 @@ export const muiTheme = createTheme({
       blue,
       lightBlue,
     },
+
+    // mode: "dark",
+
     primary: {
       main: dark,
     },
@@ -36,10 +39,12 @@ export const muiTheme = createTheme({
       main: lightBlue,
     },
   },
+
   typography: {
-    fontFamily: ["product-sans", "Roboto", "sans-serif"].join(", "),
+    fontFamily: ['"product-sans-regular"', "Roboto", "sans-serif"].join(", "),
     fontSize: 10,
     htmlFontSize: 10,
+
     h1: {
       fontSize: "clamp(2.3rem,3vw,3rem)",
       color: dark,
@@ -134,5 +139,3 @@ export const muiTheme = createTheme({
     },
   },
 });
-
-console.log(muiTheme);
